@@ -6,7 +6,7 @@ var source = require('vinyl-source-stream');
 var _ = require('lodash');
 
 gulp.task('default', function() {
-  return browserify('./src/entry.js', _.extend({ debug: true }))
+  return browserify('./public/entry.js', _.extend({ debug: true }))
     .transform(babelify)
     .bundle()
     .on('error', function(err) { console.log('Error: ' + err.message); })
